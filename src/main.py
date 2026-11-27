@@ -177,7 +177,7 @@ if __name__ == "__main__":
             #print(f"[-] Monitor {index}: FAILED")
             #print(f"    Error: {result.get('error', result.get('output', 'Unknown error'))}")
 
-    if success == 1:
+    if success >= 1:
         print("done")
     else:
         print("fail")
