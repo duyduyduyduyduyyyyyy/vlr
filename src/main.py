@@ -171,14 +171,15 @@ if __name__ == "__main__":
     for index, result in enumerate(results, 1):
         if result["success"]:
             success += 1
-            print(f"[+] Monitor {index}: DISABLED")
+            #print(f"[+] Monitor {index}: DISABLED")
         else:
             failed += 1
-            print(f"[-] Monitor {index}: FAILED")
-            print(f"    Error: {result.get('error', result.get('output', 'Unknown error'))}")
+            #print(f"[-] Monitor {index}: FAILED")
+            #print(f"    Error: {result.get('error', result.get('output', 'Unknown error'))}")
 
-    print("\n" + "=" * 55)
-    print(f"Finished! Success: {success} | Failed: {failed}")
-    print("=" * 55)
+    if success == 1:
+        print("done")
+    else:
+        print("fail")
 
     input("\nPress Enter to exit...")
